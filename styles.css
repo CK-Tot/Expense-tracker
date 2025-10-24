@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +6,165 @@
 }
 
 body {
-    font-family: "Bitcount Grid Single", system-ui;
+    font-family: "Inter", system-ui;
     width: 100%;
     min-height: 100vh;
     background: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
 }
+
+.container {
+    width: 550px;
+    background: #fff;
+    padding: 30px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.balance {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.balance h2 {
+    color: #333;
+}
+
+.balance h3 {
+    font-size: 2.2rem;
+}
+
+
+.income-expense {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    margin-bottom: 30px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.income, .expense {
+    text-align: center;
+}
+
+.income h4, .expense h4 {
+    margin: 0 0 10px 0;
+}
+
+
+.income .amount {
+    color: #2ecc71;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.expense .amount {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+.add-transaction h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #96f2d7;
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    background: #20c997;
+}
+
+.history {
+    margin-top: 10px;
+}
+
+.history h3 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f8f9fa;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #e74c3c;
+    gap: 10px;
+}
+
+.transaction.income {
+    border-left-color: #2ecc71;
+}
+
+.transaction .details {
+    flex: 1;
+}
+
+.transaction .amount {
+    font-weight: bold;
+}
+
+.transaction .delete {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.transaction .delete:hover {
+    background: #d4594c;
+}
+
